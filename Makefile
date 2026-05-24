@@ -3,6 +3,7 @@ FLAGS = -Wall -g
 all: server clean
 
 server: main.o parser.o
+	mkdir -p bin
 	gcc main.o parser.o -o bin/server $(FLAGS)
 
 main.o:
